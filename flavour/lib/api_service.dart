@@ -8,7 +8,7 @@ class ApiService {
 
   static const List<String> _localUsers = [
     "Sivabharathi (Local Dev)",
-    "avinash (cal Dev)",
+    "avinash (local Dev)",
     "Narayanan(Local Dev)",
     "Suriya (Local Dev)",
     "bharathi (Local Dev)",

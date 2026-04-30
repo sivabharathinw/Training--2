@@ -14,7 +14,6 @@ void main() async {
       .forEach(print);
 
   print("\nflatMap");
-  await Stream.fromIterable([1, 2, 3])
       .flatMap((x) => Stream.fromIterable([x, x * 10]))
       .forEach(print);
 
