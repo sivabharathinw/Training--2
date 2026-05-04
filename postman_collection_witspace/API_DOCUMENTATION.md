@@ -441,7 +441,8 @@ Management of workspace organizations and tenants.
     {
       "id": "69e4dec0000afcb2a182",
       "name": "Tech Corp"
-    }
+    },
+    "..."
   ]
 }
 ```
@@ -626,9 +627,11 @@ Management of workspace organizations and tenants.
   "success": true,
   "data": [
     {
-      "uid": "tenant123",
+      "id": "tenant123",
+      "email": "tenant@example.com",
       "status": "active"
-    }
+    },
+    "..."
   ]
 }
 ```
@@ -708,9 +711,10 @@ User associations within an entity.
   "success": true,
   "data": [
     {
-      "eid": "entity123",
+      "id": "entity123",
       "name": "Tech Corp"
-    }
+    },
+    "..."
   ]
 }
 ```
@@ -736,9 +740,10 @@ User associations within an entity.
   "success": true,
   "data": [
     {
-      "bid": "branch123",
+      "id": "branch123",
       "name": "Downtown Branch"
-    }
+    },
+    "..."
   ]
 }
 ```
@@ -844,7 +849,8 @@ Role management for users within entities.
     {
       "uid": "user123",
       "role": "admin"
-    }
+    },
+    "..."
   ]
 }
 ```
@@ -873,7 +879,8 @@ Role management for users within entities.
       "eid": "69e4dec0000afcb2a182",
       "role": "admin",
       "access": "entity"
-    }
+    },
+    "..."
   ]
 }
 ```
@@ -995,7 +1002,8 @@ Management of individual office locations.
     {
       "id": "69e5b2f300359747e59f",
       "name": "Downtown Branch"
-    }
+    },
+    "..."
   ]
 }
 ```
@@ -1263,7 +1271,8 @@ Resources within a branch (Cabins, Desks, Meeting Rooms).
     {
       "id": "69e5c8e20008b25a429e",
       "name": "Cabin 8 Seater Room"
-    }
+    },
+    "..."
   ]
 }
 ```
@@ -1694,7 +1703,8 @@ Reservation management for facilities.
     {
       "id": "69e5c8f10009525a429f",
       "status": "booked"
-    }
+    },
+    "..."
   ]
 }
 ```
@@ -2260,7 +2270,8 @@ Support and issue tracking.
     {
       "id": "tkid123",
       "title": "Restroom maintenance"
-    }
+    },
+    "..."
   ]
 }
 ```
@@ -2414,7 +2425,8 @@ Support and issue tracking.
     {
       "commentId": "comment123",
       "message": "..."
-    }
+    },
+    "..."
   ]
 }
 ```
@@ -2505,7 +2517,8 @@ Support and issue tracking.
     {
       "id": "cat123",
       "name": "Technical Issues"
-    }
+    },
+    "..."
   ]
 }
 ```
@@ -2643,7 +2656,8 @@ Identity verification processes.
     {
       "kycId": "kyc123",
       "fullName": "John Doe"
-    }
+    },
+    "..."
   ]
 }
 ```
@@ -3082,8 +3096,9 @@ Public updates and community content.
   "data": [
     {
       "id": "post123",
-      "title": "..."
-    }
+      "title": "Welcome to our new coworking space!"
+    },
+    "..."
   ]
 }
 ```
@@ -3441,7 +3456,8 @@ Subscription models and credit management.
     {
       "id": "plan123",
       "name": "8 Seater Cabin"
-    }
+    },
+    "..."
   ]
 }
 ```
@@ -3537,7 +3553,8 @@ Push and in-app alerts.
     {
       "id": "notif123",
       "title": "Welcome!"
-    }
+    },
+    "..."
   ]
 }
 ```
