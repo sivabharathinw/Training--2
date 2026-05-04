@@ -1,0 +1,3612 @@
+  {
+  "info": {
+    "_postman_id": "42066c59-efa5-46a7-8622-be060ddb8439",
+    "name": "Witspace API Collection",
+    "description": "Complete API collection for Witspace backend with sample request bodies",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17702796"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "item": [
+        {
+          "name": "Ping",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/ping",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "ping"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Version",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/ping",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "ping"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/check",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "check"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Docs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/docs.json",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "docs.json"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Test",
+      "item": [
+        {
+          "name": "Get ID Token",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/test/getIDToken",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "test",
+                "getIDToken"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"\",\n    \"email\": \"john.doe@example.com\",\n    \"phoneNo\": \"+919876543210\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"profileImageUrl\": \"https://example.com/images/profiles/john-doe.jpg\",\n    \"provider\": \"google\",\n    \"isDisabled\": false\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/user",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/user/:uid",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                ":uid"
+              ],
+              "variable": [
+                {
+                  "key": "uid",
+                  "value": "69e4dec0000afcb2a182"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"{{uid}}\",\n    \"email\": \"john.doe@example.com\",\n    \"phoneNo\": \"+919876543210\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"profileImageUrl\": \"https://example.com/images/profiles/john-doe.jpg\",\n    \"provider\": \"google\",\n    \"isDisabled\": false\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/user/ :uid",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                ":uid"
+              ],
+              "variable": [
+                {
+                  "key": "uid",
+                  "value": "69e4dec0000afcb2a182"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/user/:uid",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                ":uid"
+              ],
+              "variable": [
+                {
+                  "key": "uid",
+                  "value": "69e4dec0000afcb2a182"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Disable User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"69e21b3e001c9a17aba5\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/user/disable",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "disable"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User Meta",
+      "item": [
+        {
+          "name": "Add Facility to Favorites",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"user123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/user-meta/addFacilityToFav/{{bfid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user-meta",
+                "addFacilityToFav",
+                "{{bfid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Remove Facility from Favorites",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/user-meta/removeFacilityFromFav/{{bfid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user-meta",
+                "removeFacilityFromFav",
+                "{{bfid}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Entities",
+      "item": [
+        {
+          "name": "Create Entity",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.collectionVariables.set(\"eid\", pm.response.json().data.id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"\",\n    \"name\": \"Tech Corp\",\n    \"email\": \"contact@techcorp.com\",\n    \"phoneNo\": \"+1234567890\",\n    \"profilePic\": \"https://example.com/logo.png\",\n    \"isSpaceOrganization\": true,\n    \"gst\": \"29ABCDE1234F1Z5\",\n    \"pan\": \"ABCDE1234F\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/entities",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entities"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Entities",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/entities",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entities"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Entity by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/entities/{{eid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entities",
+                "{{eid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Entity",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Tech Corp Updated\",\n  \"email\": \"newemail@techcorp.com\",\n  \"address\": {\n    \"addressLine\": \"456 New Street\",\n    \"city\": \"New York\",\n    \"state\": \"NY\",\n    \"country\": \"USA\",\n    \"pinCode\": 10002\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/entities/{{eid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entities",
+                "{{eid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Entity",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/entities/{{eid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entities",
+                "{{eid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Invite Tenant",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"inviterId\": \"user123\",\n  \"role\": \"admin\",\n  \"entityUser\": {\n    \"uid\": \"tenant123\",\n    \"eid\": \"entity123\",\n    \"phoneNo\": \"+1234567890\",\n    \"email\": \"tenant@example.com\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Tenant\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/entities/:eid/tenants/invite",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entities",
+                ":eid",
+                "tenants",
+                "invite"
+              ],
+              "variable": [
+                {
+                  "key": "eid",
+                  "value": "entity123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Accept Tenant Invite",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"tenant123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/entities/:eid/tenants/:linkId/accept",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entities",
+                ":eid",
+                "tenants",
+                ":linkId",
+                "accept"
+              ],
+              "variable": [
+                {
+                  "key": "eid",
+                  "value": "entity123"
+                },
+                {
+                  "key": "linkId",
+                  "value": "link123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Entity Tenants",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/entities/:eid/tenants",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entities",
+                ":eid",
+                "tenants"
+              ],
+              "variable": [
+                {
+                  "key": "eid",
+                  "value": "entity123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Tenant by Link ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/entities/:eid/tenants/:linkId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entities",
+                ":eid",
+                "tenants",
+                ":linkId"
+              ],
+              "variable": [
+                {
+                  "key": "eid",
+                  "value": "entity123"
+                },
+                {
+                  "key": "linkId",
+                  "value": "link123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Tenant",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/entities/:eid/tenants/:linkId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entities",
+                ":eid",
+                "tenants",
+                ":linkId"
+              ],
+              "variable": [
+                {
+                  "key": "eid",
+                  "value": "entity123"
+                },
+                {
+                  "key": "linkId",
+                  "value": "link123"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Entity Users",
+      "item": [
+        {
+          "name": "Get User Entities",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/user-entities",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user-entities"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User Branches",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/user-branches",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "user-branches"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Entity User Roles",
+      "item": [
+        {
+          "name": "Create Entity User Role",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"roles\": {\n    \"role1\": {\n      \"uid\": \"user123\",\n      \"eid\": \"entity123\",\n      \"bid\": \"branch123\",\n      \"tid\": \"tenant123\",\n      \"role\": \"admin\",\n      \"access\": \"entity\"\n    }\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/entity-user-role",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entity-user-role"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Entity User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"user123\",\n  \"eid\": \"entity123\",\n  \"role\": \"manager\",\n  \"access\": \"branch\",\n  \"bid\": \"branch123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/entity-user-role/add-entity-user",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entity-user-role",
+                "add-entity-user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Entity Users",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/entity-user-role/entity-user",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entity-user-role",
+                "entity-user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User Entities",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/entity-user-role/user-entity",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entity-user-role",
+                "user-entity"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Entity User Role",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/entity-user-role/:eid/:uid",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entity-user-role",
+                ":eid",
+                ":uid"
+              ],
+              "variable": [
+                {
+                  "key": "eid",
+                  "value": "entity123"
+                },
+                {
+                  "key": "uid",
+                  "value": "user123"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Branch",
+      "item": [
+        {
+          "name": "Create Branch",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.collectionVariables.set(\"bid\", pm.response.json().data.id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"\",\n    \"eid\": \"{{eid}}\",\n    \"email\": \"branch@example.com\",\n    \"phoneNo\": \"+1234567890\",\n    \"name\": \"Downtown Branch\",\n    \"description\": \"Main downtown coworking space\",\n    \"website\": \"https://downtown.example.com\",\n    \"profilePic\": \"https://example.com/branch-logo.jpg\",\n    \"occupancy\": 100,\n    \"address\": {\n        \"addressLine\": \"789 Business Ave\",\n        \"landmark\": \"Next to Tech Hub\",\n        \"city\": \"San Francisco\",\n        \"state\": \"CA\",\n        \"country\": \"USA\",\n        \"pinCode\": 94102\n    },\n    \"location\": {\n        \"lat\": 37.7749,\n        \"long\": -122.4194\n    },\n    \"floorPlans\": [\n        \"https://example.com/floor1.pdf\",\n        \"https://example.com/floor2.pdf\"\n    ],\n    \"floor\": 3,\n    \"size\": 5000,\n    \"images\": [\n        \"https://example.com/image1.jpg\",\n        \"https://example.com/image2.jpg\"\n    ],\n    \"operatingHours\": {\n        \"hours\": [\n\n        ]\n    }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Branches",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/branch",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Branch by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Branch",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Downtown Branch - Updated\",\n  \"description\": \"Updated description\",\n  \"occupancy\": 150,\n  \"operatingHours\": {\n    \"hours\": [\n      {\n        \"weekday\": 1,\n        \"open\": \"08:00\",\n        \"close\": \"20:00\"\n      }\n    ]\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/:bid",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                ":bid"
+              ],
+              "variable": [
+                {
+                  "key": "bid",
+                  "value": "69e5b2f300359747e59f"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Branch",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/:bid",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                ":bid"
+              ],
+              "variable": [
+                {
+                  "key": "bid",
+                  "value": "branch123"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Branch Config",
+      "item": [
+        {
+          "name": "Create Branch Config",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n \"id\":\"{{bid}}\",\n  \"termsConditions\": \"These are the terms and conditions for using this branch. All users must comply with the rules and regulations.\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch-config/{{bid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch-config",
+                "{{bid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Branch Config",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/branch-config/{{bid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch-config",
+                "{{bid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Branch Config",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/branch-config/{{bid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch-config",
+                "{{bid}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Branch Facilities",
+      "item": [
+        {
+          "name": "Create Facility",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.collectionVariables.set(\"bfid\", pm.response.json().data.id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":\"\",\n  \"bid\": \"{{bid}}\",\n  \"code\": \"CAB-008\",\n  \"name\": \"Cabin 8 Seater Room\",\n  \"description\": \"A Cabin with 8 seater\",\n  \"typeId\": \"{{bftid}}\",\n  \"status\": \"ACTIVE\",\n  \"images\": [\n    \"https://example.com/conf-room1.jpg\",\n    \"https://example.com/conf-room2.jpg\"\n  ],\n  \"quantity\": 1,\n  \"bookingType\": \"monthly\",\n  \"price\": 120000,\n  \"credits\": 0,\n  \"occupancy\": 8,\n  \"location\": {\n    \"lat\": 37.7749,\n    \"long\": -122.4194\n  },\n  \"floor\": 2,\n  \"floorPlan\": \"https://example.com/floor2-plan.pdf\",\n  \"dimensions\": {\n    \"width\": 20,\n    \"length\": 30\n  },\n  \"currentOccupant\": null\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/facility",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "facility"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Facilities",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/facility",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "facility"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Facility by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/facility/{{bfid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "facility",
+                "{{bfid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Facility",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"{{bfid}}\",\n    \"bid\": \"{{bid}}\",\n    \"code\": \"CONF-001\",\n    \"description\": \"Large conference room with video conferencing\",\n    \"typeId\": \"facilitytype123\",\n    \"images\": [\n        \"https://example.com/conf-room1.jpg\",\n        \"https://example.com/conf-room2.jpg\"\n    ],\n    \"quantity\": 1,\n    \"bookingType\": \"hourly\",\n    \"occupancy\": 12,\n    \"location\": {\n        \"lat\": 37.7749,\n        \"long\": -122.4194\n    },\n    \"floor\": 2,\n    \"floorPlan\": \"https://example.com/floor2-plan.pdf\",\n    \"dimensions\": {\n        \"width\": 20,\n        \"length\": 30\n    },\n    \"meta\":{},\n    \"name\": \"Conference Room A - Updated\",\n    \"status\": \"MAINTENANCE\",\n    \"price\": 60,\n    \"credits\": 6\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/facility/{{bfid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "facility",
+                "{{bfid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Facility",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/facility/{{bfid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "facility",
+                "{{bfid}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Branch Facility Types",
+      "item": [
+        {
+          "name": "Create Facility Type",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.collectionVariables.set(\"bftid\", pm.response.json().data.id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"\",\n    \"bid\": \"{{bid}}\",\n    \"code\": \"CAB\",\n    \"name\": \"Cabin\",\n    \"description\": \"A Dedicted Cabin For a Organization\",\n    \"category\": \"ASSIGNABLE\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/facility-type",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "facility-type"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Facility Type by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/facility-type/{{bftid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "facility-type",
+                "{{bftid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Facility Type",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"{{bftid}}\",\n    \"bid\": \"{{bid}}\",\n    \"code\": \"CONF\",\n    \"category\": \"BOOKABLE\",\n    \"name\": \"Conference Room - Updated\",\n    \"description\": \"Updated description for meeting spaces\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/facility-type/{{bftid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "facility-type",
+                "{{bftid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Facility Type",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/facility-type/{{bftid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "facility-type",
+                "{{bftid}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Branch Reviews",
+      "item": [
+        {
+          "name": "Create Review",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.collectionVariables.set(\"brid\", pm.response.json().data.id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"\",\n    \"uid\": \"{{uid}}\",\n    \"bid\": \"{{bid}}\",\n    \"rating\": 5,\n    \"feedback\": \"Excellent coworking space with great amenities and helpful staff!\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/review",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "review"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Review by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/review/{{brid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "review",
+                "{{brid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Review",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rating\": 4,\n  \"feedback\": \"Great space, but could use more parking spots.\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/:brid",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                ":brid"
+              ],
+              "variable": [
+                {
+                  "key": "brid",
+                  "value": "review123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Review",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/review/{{brid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "review",
+                "{{brid}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Booking",
+      "item": [
+        {
+          "name": "Create Booking",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.collectionVariables.set(\"boid\", pm.response.json().data.id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":\"\",\n  \"branchId\": \"{{bid}}\",\n  \"facilityId\": \"{{bfid}}\",\n  \"startTime\": \"2026-04-20T09:00:00Z\",\n  \"endTime\": \"2026-04-20T12:00:00Z\",\n  \"status\": \"booked\",\n  \"ownerType\":\"USER\",\n  \"ownerId\": \"{{uid}}\",\n  \"userId\":\"{{uid}}\"\n\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/booking",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "booking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Bookings",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/booking",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "booking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Booking by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/booking/{{boid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "booking",
+                "{{boid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Booking",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":\"{{boid}}\",\n  \"branchId\": \"{{bid}}\",\n  \"facilityId\": \"{{bfid}}\",\n  \"startTime\": \"2026-04-20T09:00:00Z\",\n  \"endTime\": \"2026-04-20T13:00:00Z\",\n  \"status\": \"booked\",\n  \"ownerType\":\"USER\",\n  \"ownerId\": \"{{uid}}\",\n  \"userId\":\"{{uid}}\"\n\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/booking/{{boid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "booking",
+                "{{boid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Booking",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/booking/{{boid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "booking",
+                "{{boid}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Guest",
+      "item": [
+        {
+          "name": "Invite Guest",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.collectionVariables.set(\"bgid\", pm.response.json().data.id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"\",\n    \"branchId\": \"{{bid}}\",\n    \"name\": \"Jane Guest\",\n    \"email\": \"guest@example.com\",\n    \"phone\": \"+1234567890\",\n    \"emergencyContact\": \"+911234567890\",\n    \"invitedBy\": \"{{uid}}\",\n    \"qrPassCode\": \"\",\n    \"validFrom\": \"2026-04-21T00:00:00Z\",\n    \"validTo\": \"2026-04-21T00:00:00Z\",\n    \"status\": \"pending\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/guests/invite",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "guests",
+                "invite"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Guest Status",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"approvalStatus\": \"approved\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/guests/{{bgid}}/status",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "guests",
+                "{{bgid}}",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Guest QR Pass",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/guests/QR-69e5c8d40008125a429d",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "guests",
+                "QR-69e5c8d40008125a429d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Guest Check-in",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"checkInTime\": \"2026-04-20T09:00:00Z\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/guests/{{bgid}}/checkin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "guests",
+                "{{bgid}}",
+                "checkin"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Guest Check-out",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"checkOutTime\": \"2026-04-20T17:00:00Z\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/guests/{{bgid}}/checkout",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "guests",
+                "{{bgid}}",
+                "checkout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Assignment",
+      "item": [
+        {
+          "name": "Create Assignment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"user123\",\n  \"bid\": \"branch123\",\n  \"fid\": \"facility123\",\n  \"startDate\": \"2026-04-20\",\n  \"endDate\": \"2026-07-20\",\n  \"assignmentType\": \"dedicated\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/assignment",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "assignment"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Assignment by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/assignment/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "assignment",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "assignment123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Assignment",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"endDate\": \"2026-08-20\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/assignment/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "assignment",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "assignment123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Assignment",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/assignment/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "assignment",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "assignment123"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Usage",
+      "item": [
+        {
+          "name": "Create Usage Record",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"user123\",\n  \"bid\": \"branch123\",\n  \"fid\": \"facility123\",\n  \"usageType\": \"hourly\",\n  \"startTime\": \"2026-04-20T09:00:00Z\",\n  \"endTime\": \"2026-04-20T12:00:00Z\",\n  \"credits\": 3\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/usage",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "usage"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Usage by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/usage/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "usage",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "usage123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Usage",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"endTime\": \"2026-04-20T13:00:00Z\",\n  \"credits\": 4\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/usage/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "usage",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "usage123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Usage",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/usage/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "usage",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "usage123"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tickets",
+      "item": [
+        {
+          "name": "Create Ticket",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.collectionVariables.set(\"tkid\", pm.response.json().data.id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":\"\",\n  \"title\": \"Internet connectivity issue\",\n  \"description\": \"Unable to connect to WiFi in conference room A\",\n  \"status\": \"open\",\n  \"category\":\"\",\n  \"createdBy\":\"{{uid}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/tickets",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tickets"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Tickets",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/tickets",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tickets"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Ticket by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/tickets/{{tkid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tickets",
+                "{{tkid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Ticket",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":\"{{tkid}}\",\n      \"title\": \"Internet connectivity issue\",\n        \"description\": \"Unable to connect to WiFi in conference room A\",\n        \"status\": \"resolved\",\n        \"category\": \"\",\n        \"createdBy\": \"69e5b2310003ce9152fd\",\n        \"createdAt\": \"2026-04-20T06:54:41.427+00:00\",\n        \"updatedAt\": \"2026-04-20T06:54:41.427+00:00\",\n        \"assignedTo\": null,\n        \"workspaceId\": null,\n        \"targetType\": null,\n        \"targetId\": null\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/tickets/{{tkid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tickets",
+                "{{tkid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Ticket",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/tickets/{{tkid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tickets",
+                "{{tkid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Ticket Comment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"ticketId\":\"{{tkid}}\",\n  \"userId\": \"{{uid}}\",\n  \"message\": \"I've reset the router and the issue persists.\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/tickets/{{tkid}}/comments",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tickets",
+                "{{tkid}}",
+                "comments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Ticket Comments",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/tickets/{{tkid}}/comments",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tickets",
+                "{{tkid}}",
+                "comments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Ticket Status",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"resolved\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/tickets/{{tkid}}/status",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tickets",
+                "{{tkid}}",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Ticket Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Technical Issues\",\n  \"description\": \"Internet, WiFi, hardware problems\",\n  \"isActive\": true\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/tickets/categories",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tickets",
+                "categories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Ticket Categories",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/tickets/categories",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tickets",
+                "categories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Ticket Category",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Technical Support\",\n  \"description\": \"All technical and connectivity issues\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/tickets/categories/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tickets",
+                "categories",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "category123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Deactivate Ticket Category",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/tickets/categories/:id/deactivate",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tickets",
+                "categories",
+                ":id",
+                "deactivate"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "category123"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "KYC",
+      "item": [
+        {
+          "name": "Create KYC",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"user123\",\n  \"documentType\": \"passport\",\n  \"documentNumber\": \"A12345678\",\n  \"fullName\": \"John Doe\",\n  \"dateOfBirth\": \"1990-01-15\",\n  \"address\": {\n    \"addressLine\": \"123 Main St\",\n    \"city\": \"New York\",\n    \"state\": \"NY\",\n    \"country\": \"USA\",\n    \"pinCode\": 10001\n  },\n  \"documentImages\": [\n    \"https://example.com/passport-front.jpg\",\n    \"https://example.com/passport-back.jpg\"\n  ],\n  \"status\": \"pending\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/kyc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "kyc"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All KYC",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/kyc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "kyc"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get KYC by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/kyc/:kid",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "kyc",
+                ":kid"
+              ],
+              "variable": [
+                {
+                  "key": "kid",
+                  "value": "kyc123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update KYC",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"verified\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/kyc/:kid",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "kyc",
+                ":kid"
+              ],
+              "variable": [
+                {
+                  "key": "kid",
+                  "value": "kyc123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete KYC",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/kyc/:kid",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "kyc",
+                ":kid"
+              ],
+              "variable": [
+                {
+                  "key": "kid",
+                  "value": "kyc123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Mark KYC Success",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/kyc/:kid/success",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "kyc",
+                ":kid",
+                "success"
+              ],
+              "variable": [
+                {
+                  "key": "kid",
+                  "value": "kyc123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Mark KYC Failed",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/kyc/:kid/failed",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "kyc",
+                ":kid",
+                "failed"
+              ],
+              "variable": [
+                {
+                  "key": "kid",
+                  "value": "kyc123"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Messages & Threads",
+      "item": [
+        {
+          "name": "Create Message",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"threadId\": \"thread123\",\n  \"senderId\": \"user123\",\n  \"content\": \"Hello, I have a question about my booking.\",\n  \"messageType\": \"text\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/message",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "message"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Message by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/message/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "message",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "message123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Message",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"content\": \"Updated message content\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/message/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "message",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "message123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Message",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/message/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "message",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "message123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Thread",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"participants\": [\"user123\", \"user456\"],\n  \"subject\": \"Booking inquiry\",\n  \"threadType\": \"direct\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/thread",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "thread"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Thread by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/thread/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "thread",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "thread123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Thread",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"subject\": \"Updated subject\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/thread/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "thread",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "thread123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Thread",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/thread/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "thread",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "thread123"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Posts",
+      "item": [
+        {
+          "name": "Create Post",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.collectionVariables.set(\"pid\", pm.response.json().data.id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"\",\n    \"branchId\": \"{{bid}}\",\n    \"contentType\":\"post\",\n    \"access\":\"branch\",\n    \"accessId\":\"{{bid}}\",\n\n    \"title\": \"Welcome to our new coworking space!\",\n    \"description\": \"We're excited to announce the opening of our new branch in downtown.\",\n    \"content\": [\n        \"https://example.com/post-image1.jpg\"\n    ],\n    \"tags\": [\n        \"announcement\",\n        \"opening\"\n    ]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/post",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "post"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Posts",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/post",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "post"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Post by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/post/{{pid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "post",
+                "{{pid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Post",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"{{pid}}\",\n    \"branchId\": \"{{bid}}\",\n    \"contentType\":\"post\",\n    \"access\":\"branch\",\n    \"accessId\":\"{{bid}}\",\n\n    \"title\": \"Welcome to our new coworking space!\",\n    \"description\": \"We're excited to announce the opening of our new branch in downtown.\",\n    \"content\": [\n        \"https://example.com/post-image1.jpg\"\n    ],\n    \"tags\": [\n        \"announcement\",\n        \"Closed\"\n    ]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/post/{{pid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "post",
+                "{{pid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Post",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/post/{{pid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "post",
+                "{{pid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Publish Post",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/:id/publish",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                ":id",
+                "publish"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "post123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Archive Post",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/:id/archive",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                ":id",
+                "archive"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "post123"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Membership & Plans",
+      "item": [
+        {
+          "name": "Claim Membership",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"user123\",\n  \"planId\": \"{{bpid}}\",\n  \"ownerType\": \"USER\",\n  \"ownerId\":\"{{uid}}\",\n  \"startDate\":\"2026-04-21T00:00:00Z\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/memberships/claim",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "memberships",
+                "claim"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Terminate Membership",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/memberships/{{mid}}/terminate",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "memberships",
+                "{{mid}}",
+                "terminate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Grant Credits",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"credits\": 100,\n  \"reason\": \"Promotional bonus\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/:id/grant-credits",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                ":id",
+                "grant-credits"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "membership123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Plan",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.collectionVariables.set(\"bpid\", pm.response.json().data.id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"\",\n    \"branchId\": \"{{bid}}\",\n    \"name\": \"8 Seater Cabin\",\n    \"description\": \"\",\n    \"durationDays\": 30,\n    \"price\": 120000,\n    \"includedCredits\": 10000,\n    \"status\": \"PUBLISHED\",\n    \"entitlements\": [\n        {\n            \"facilityId\": \"{{bfid}}\",\n            \"accessMode\": \"INCLUDED\",\n            \"maxUnits\": 1\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/plans",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "plans"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Plan",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.collectionVariables.set(\"bpid\", pm.response.json().data.id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"{{bpid}}\",\n    \"branchId\": \"{{bid}}\",\n    \"name\": \"8 Seater Cabin\",\n    \"description\": \"\",\n    \"durationDays\": 30,\n    \"price\": 120000,\n    \"includedCredits\": 10000,\n    \"status\": \"PUBLISHED\",\n    \"entitlements\": [\n        {\n            \"facilityId\": \"{{bfid}}\",\n            \"accessMode\": \"INCLUDED\",\n            \"maxUnits\": 1\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/plans/{{bpid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "plans",
+                "{{bpid}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Plans",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/plans",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "plans"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Plans By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/branch/{{bid}}/plans/{{bpid}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "branch",
+                "{{bid}}",
+                "plans",
+                "{{bpid}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Notifications",
+      "item": [
+        {
+          "name": "Create Notification",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"user123\",\n  \"title\": \"Booking Confirmed\",\n  \"message\": \"Your booking for Conference Room A has been confirmed.\",\n  \"type\": \"booking\",\n  \"data\": {\n    \"bookingId\": \"booking123\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/notifications",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "notifications"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User Notifications",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/notifications/:role/:uid",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "notifications",
+                ":role",
+                ":uid"
+              ],
+              "variable": [
+                {
+                  "key": "role",
+                  "value": "user"
+                },
+                {
+                  "key": "uid",
+                  "value": "user123"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Invite",
+      "item": [
+        {
+          "name": "Send Invite",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"role\": {\n    \"uid\":\"\",\n    \"eid\":\"{{eid}}\",\n    \"role\":\"manager\",\n    \"access\":\"entity\"\n  },\n  \"user\": {\n    \"id\":\"\",\n    \"uid\": \"\",\n    \"eid\": \"{{eid}}\",\n    \"phoneNo\": \"+1234567890\",\n    \"email\": \"newuser@example.com\",\n    \"firstName\": \"New\",\n    \"lastName\": \"User\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/entities/{{eid}}/entity-user/send-invite",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entities",
+                "{{eid}}",
+                "entity-user",
+                "send-invite"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Accept Invite",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"invite\":{\n    \"id\":\"69e5d766003e7ec37797\",\n    \"code\": \"INVITE123\",\n    \"inviterId\": \"{{uid}}\",\n    \"entityId\": \"{{eid}}\",\n    \"status\": \"accepted\",\n    \"role\": {\n        \"uid\": \"\",\n        \"eid\": \"{{eid}}\",\n        \"role\": \"manager\",\n        \"access\": \"entity\"\n    },\n    \"entityUser\": {\n        \"id\": \"\",\n        \"uid\": \"\",\n        \"eid\": \"{{eid}}\",\n        \"phoneNo\": \"+1234567890\",\n        \"email\": \"newuser@example.com\",\n        \"firstName\": \"New\",\n        \"lastName\": \"User\"\n    }\n}}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/entities/{{eid}}/entity-user/accept-invite",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "entities",
+                "{{eid}}",
+                "entity-user",
+                "accept-invite"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{uid}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "authToken",
+      "value": ""
+    },
+    {
+      "key": "eid",
+      "value": ""
+    },
+    {
+      "key": "bid",
+      "value": ""
+    },
+    {
+      "key": "bfid",
+      "value": ""
+    },
+    {
+      "key": "bftid",
+      "value": ""
+    },
+    {
+      "key": "brid",
+      "value": ""
+    },
+    {
+      "key": "boid",
+      "value": ""
+    },
+    {
+      "key": "bgid",
+      "value": ""
+    },
+    {
+      "key": "tkid",
+      "value": ""
+    },
+    {
+      "key": "pid",
+      "value": ""
+    },
+    {
+      "key": "bpid",
+      "value": ""
+    }
+  ]
+}
