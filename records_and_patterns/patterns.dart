@@ -9,9 +9,11 @@ void main() {
   print(qualification);
   print(address);
 
+
   print("PATTERNS FOR NAMED RECORDS");
   var clothTypes = (typeName:"cotton", price:2000, color:"blue");
   var (:typeName, :price, :color)=clothTypes;
+
   print(typeName);
   print(price);
   print(color);
@@ -29,7 +31,8 @@ void main() {
 
 
   //pattern matching and extract
-  var flutterPackage = (name: "provider", version:3.0);
+  var flutterPackage = (name: "provider", version:3.5);
+  //it checks the name field ,if it is matchs then it extracts the version field
   if (flutterPackage case (name:"provider", :var version)){
     print(version);
   }
@@ -37,6 +40,7 @@ void main() {
     print("no packages are found");
   }
 }
+
 
 
 
